@@ -102,4 +102,61 @@ function Square(width){
 const rubixCube= new Square(5);
 rubixCube.draw();
 
-//Constructor properties
+//Function are Object
+
+let hola=function (){
+    console.log("Hola function")
+}
+
+//Value types & Reference types
+
+let x=10;
+let y=x;
+
+//Reasign x to asnother value
+x=20;
+//console x and y will have different value bcz theu are different
+
+let a={
+    value:10
+}
+let b=x;
+
+//here a and b will have the same value, b depend on a value
+// a and b are pointing to the same value
+
+
+ /* NOTE :
+ 
+    Primitives are copied by their value;
+    Object are copied by their reference
+ 
+ */
+
+//Adding and removing Properties
+
+const car={
+    color:"red",
+}
+
+car.mark="Toyota-Supra";
+car.start=function(){
+    console.log("Vroum")
+}
+car['owner']="Chrispaix";
+car.option={
+    clim:"availble",
+    rings:"Chrome"
+}
+
+/*bracket notation are useful especially when you
+want to access dynamically a property name*/
+
+
+
+//Delete propreties, u can use dot or bracket notation
+delete car.mark;
+delete car.option;
+console.log(car)
+
+//40 eme second
