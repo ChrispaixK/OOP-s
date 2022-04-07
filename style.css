@@ -1,0 +1,44 @@
+body{
+    background-image: url('bg.jpg');
+}
+.logo{
+    margin-top: 50px;
+text-align: center;
+}
+header{
+    margin-top: 250px;
+    text-align: center;
+}
+h1{
+    font-size: 400%;
+}
+p{
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top: 0px;
+    font-size: 20px;
+}
+
+@media (max-width:900px) {
+    h1{
+        font-size: 50px;
+    }
+    p{
+        font-size: 20px;
+    }
+    header{
+        margin-top: 200px;
+    }
+    
+}
+@media (max-width:364px) {
+    h1{
+        font-size: 40px;
+    }
+    p{
+        font-size: 10px;
+    }
+    header{
+        margin-top: 150px;
+    }
+}
