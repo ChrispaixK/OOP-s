@@ -159,4 +159,94 @@ delete car.mark;
 delete car.option;
 console.log(car)
 
-//40 eme second
+//Enumarating properties using for...in
+
+//create an object cow
+
+let country={
+    language:["kirundi","french","english"],
+    density:28900,
+    belongEAC:true,
+    salutation:function(name){
+        console.log(`Amahoro ${name}, Mwiriwe,Mwaramutse`) ;
+    },
+    Cname:"Burundi",
+}
+
+for(let ikirimw in country){
+    if(typeof country[ikirimw] == 'function'){
+        console.log(`The function here is ${ikirimw}`)
+    }
+}
+
+//check if an object has a given property
+
+if(country.hasOwnProperty("density")){
+console.log("I have it")
+}else{
+    console.log("I don't have it")
+}
+
+//or using in
+
+if("density" in country){
+    console.log("Founded using in")
+}
+
+
+//ABSTRACTION
+
+function Triangle(height){
+    this.height=height;
+    //from this below 
+    /*
+    this.defaultLocation={ 
+        x:295865,
+        y:56121
+    },
+    */
+   //to this
+  let defaultLocation={
+    x:295865,
+    y:56121
+   };
+//GETTERS and SETTERS
+   Object.defineProperty(this, 'defaultLocation', {
+       /*define getters...be able to read only private
+       or hidden by abstraction infos from outside  */
+       get:function(){
+           return defaultLocation;
+       },
+       /*
+       define setter to be able to access value of
+       hidden infos by abstraction and use them as well
+        */
+       set:function(value){
+           if(value < 5){
+               throw new Error('Ipu reka reka');
+           }
+       }
+   })
+
+
+    let calculateOptimumLocation=function() {
+        console.log(`latitude ${defaultLocation.x} longitude ${defaultLocation.y}`)
+    };
+    //puting the above method into draw
+    this.draw= function(){
+        console.log(`Drawing a triangle with ${this.height} cm as height`);
+    calculateOptimumLocation();
+    };
+}
+const isocele= new Triangle(5);
+isocele.draw();
+
+//Private Properties and Methods
+/*To do so, dont't set variable or function as property
+or method, remove the this. at the beginning which
+automatically make them local and no more accessible
+from the outside*/
+
+
+//perfom an operation via the setter function
+isocele.defaultLocation=2;
