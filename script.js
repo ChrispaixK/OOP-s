@@ -249,4 +249,44 @@ from the outside*/
 
 
 //perfom an operation via the setter function
-isocele.defaultLocation=2;
+isocele.defaultLocation=12;
+
+//EXErcise
+
+function Stopwatch(){
+    let startTime,endTime,running,duration=0;
+
+    this.start=function (){
+        if(running)
+            throw new Error('Stopwatch has already started.');
+       
+        running=true;
+
+        startTime=new Date();
+    };
+
+    this.stop=function(){
+        if(!running)
+        throw new Error('Stopwatch not started yet');
+
+        running=false;
+        endTime=new Date();
+
+        const seconds=(endTime.getSeconds()-startTime.getSeconds());
+        duration+=seconds;
+    }
+    
+    this.reset=function(){
+        startTime=null;
+        endTime=null;
+        running=false;
+        duration=0;
+    }
+
+
+    Object.defineProperty(this, 'duration',{
+        get: function (){ return duration;}
+    });
+}
+
+let chrono=new Stopwatch;
