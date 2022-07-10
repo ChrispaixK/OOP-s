@@ -1,1 +1,2 @@
-#Playing around with JS
+#Add read me
+Review code
