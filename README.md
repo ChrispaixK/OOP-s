@@ -1,6 +1,7 @@
 # OOP's in RUBY
 
 ## Encapsulation
+> Encapsulation just means that all of the implementation details of the object being modeled are hidden and only the methods and properties required to use the object are exposed. 
  create setter and getter
  use `attr_accessor` to set both getter and setter
  use `attr_writer` to be able to change the attribute value only
@@ -10,8 +11,9 @@
       `attr_writer :name`
       `attr_reader :name`
 
-Abstraction
+### Abstraction
  > To make the code better we can leverage abstractions and instead of having a method using internals we have a public method that uses those same internals.
+ > Data abstraction is just a fancy way of saying that we are going to model our data to look like it's real life equivalent. 
  
  Ex: 
  
@@ -72,6 +74,7 @@ end
 ## Polymorphism
 
 > After inherit from attributes,function(methods) from the parent class this allow us to overwrite function from the parent class and modify them in the child class
+> Where do they come up with these names? Latin of course! Polymorphism means many forms which aptly describes the ability of OOP languages to use the same identifier to cause different behavior.
 
  Ex:
  
