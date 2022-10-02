@@ -1,4 +1,4 @@
-# OOP's in RUBY
+<!-- # OOP's in RUBY
 
 ## Encapsulation
 > Encapsulation just means that all of the implementation details of the object being modeled are hidden and only the methods and properties required to use the object are exposed. 
@@ -87,4 +87,4 @@ end
   end
  end
 ```
-
+ -->
