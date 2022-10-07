@@ -19,36 +19,36 @@
  
  Don't
  ```ruby
-#  class Animal
-#   ...
+ class Animal
+  ...
 
-#   def speak(animal)
-#   if animal.type == "dog"
-#     "Woof, woof"
-#   elsif animal.type == "spider"
-#     "..."
-#   end
-# end
+  def speak(animal)
+  if animal.type == "dog"
+    "Woof, woof"
+  elsif animal.type == "spider"
+    "..."
+  end
+end
 
-#   ...
-# end
-# ```
+  ...
+end
+```
 
-#   Do
-#   ```ruby
-#   class Animal
-#   ...
+  Do
+  ```ruby
+  class Animal
+  ...
 
-#   def speak
-#     if @type == "dog"
-#       "Woof, woof"
-#     elsif @type == "spider"
-#       "..."
-#     end
-#   end
+  def speak
+    if @type == "dog"
+      "Woof, woof"
+    elsif @type == "spider"
+      "..."
+    end
+  end
 
-#   ...
-#   end
+  ...
+  end
   ```
   
 ## Inheritance
